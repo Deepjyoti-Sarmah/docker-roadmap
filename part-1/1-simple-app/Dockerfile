@@ -12,12 +12,15 @@
 
 ################################################################
 
-FROM node:20
+# FROM node:20
+
+FROM mhart/alpine-node
 
 WORKDIR /usr/src/app
 
 # Copy package files and install dependencies
 COPY package*.json ./
+
 RUN npm install
 
 # Copy the rest of your project files
